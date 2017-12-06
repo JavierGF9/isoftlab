@@ -16,7 +16,7 @@ public class CuentaUsuario {
 	}
 	
 	public String leerMensaje() {
-		String contenido;
+		String contenido = null;
 		return contenido;
 	}
 }

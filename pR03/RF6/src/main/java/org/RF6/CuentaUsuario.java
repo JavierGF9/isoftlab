@@ -1,4 +1,4 @@
-package org.RF5;
+package org.RF6;
 
 public class CuentaUsuario {
 	String userName;
@@ -16,7 +16,7 @@ public class CuentaUsuario {
 	}
 	
 	public String leerMensaje() {
-		String contenido;
+		String contenido = null;
 		return contenido;
 	}
 }
