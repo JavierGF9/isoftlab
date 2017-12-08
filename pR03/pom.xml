@@ -10,5 +10,8 @@
     <module>RF5</module>
     <module>RF6</module>
     <module>RF8</module>
+    <module>RF3</module>
+    <module>RF7</module>
+    <module>RF9</module>
   </modules>
 </project>
