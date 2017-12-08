@@ -11,6 +11,9 @@
     <module>RF6</module>
     <module>RF8</module>
     <module>backend</module>
+    <module>RF3</module>
+    <module>RF7</module>
+    <module>RF9</module>
   </modules>
   <name>Isoftify</name>
   <url>https://sites.google.com/view/isoftlabs/</url>
