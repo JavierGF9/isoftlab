@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.isoftlabs</groupId>
+  <artifactId>isoftify</artifactId>
+  <version>0.0.5</version>
+  <description></description>
+  <packaging>pom</packaging>
+  <modules>
+    <module>backend</module>
+    <module>cliente</module>
+  </modules>
+  <name>Isoftify</name>
+  <url>https://sites.google.com/view/isoftlabs/</url>
+</project>
