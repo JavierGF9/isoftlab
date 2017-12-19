@@ -28,9 +28,9 @@ public class GestorCanciones {
 	
 	public Cancion[] buscarCanciones(int modo, String busqueda) {
 		/* Modos:
-		 * - 1: álbum
+		 * - 1: Album
 		 * - 2: artista
-		 * - 3: título
+		 * - 3: titulo
 		 */
 		
 		switch (modo) {

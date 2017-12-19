@@ -2,15 +2,15 @@ package org.dominio;
 
 public class Cancion {
 	private String nombre_cancion;
-	private String id;
+	private int id;
 	private float precio;
-	private float duracion;
+	private String duracion;
 	private String autor;
 	private Album album;
-	private String año;
+	private int anio;
 	
-	public Cancion(String nombre_cancion, String id, float precio, float duracion, String autor, Album album,
-			String año) {
+	public Cancion(String nombre_cancion, int id, float precio, String duracion, String autor, Album album,
+			int anio) {
 		super();
 		this.nombre_cancion = nombre_cancion;
 		this.id = id;
@@ -18,7 +18,7 @@ public class Cancion {
 		this.duracion = duracion;
 		this.autor = autor;
 		this.album = album;
-		this.año = año;
+		this.anio = anio;
 	}
 
 	public String getNombre_cancion() {
@@ -29,11 +29,11 @@ public class Cancion {
 		this.nombre_cancion = nombre_cancion;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -45,11 +45,11 @@ public class Cancion {
 		this.precio = precio;
 	}
 
-	public float getDuracion() {
+	public String getDuracion() {
 		return duracion;
 	}
 
-	public void setDuracion(float duracion) {
+	public void setDuracion(String duracion) {
 		this.duracion = duracion;
 	}
 
@@ -69,11 +69,11 @@ public class Cancion {
 		this.album = album;
 	}
 
-	public String getAño() {
-		return año;
+	public int getAnio() {
+		return anio;
 	}
 
-	public void setAño(String año) {
-		this.año = año;
+	public void setAnio(int anio) {
+		this.anio = anio;
 	}
 }

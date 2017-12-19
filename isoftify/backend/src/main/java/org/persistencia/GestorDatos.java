@@ -14,7 +14,7 @@ public class GestorDatos {
 		return instancia;
 	}
 	
-	// Guarda la canción en la BBDD
+	// Guarda la cancion en la BBDD
 	public int guardarArchivo(Cancion c) {
 		return 0;
 	}
