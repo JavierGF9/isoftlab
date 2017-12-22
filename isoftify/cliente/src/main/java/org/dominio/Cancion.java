@@ -1,5 +1,7 @@
 package org.dominio;
 
+import org.persistencia.GestorAlbumes;
+
 public class Cancion {
 	private String nombre_cancion;
 	private int id;
@@ -19,6 +21,19 @@ public class Cancion {
 		this.autor = autor;
 		this.album = album;
 		this.anio = anio;
+	}
+
+	public Cancion() {
+	}
+
+	public Cancion(int id, String titulo, String autor, int album_id, int anio, String duracion, float precio) {
+		this.id = id;
+		this.nombre_cancion = titulo;
+		this.autor = autor;
+		this.album = GestorAlbumes.getGestor().conseguirAlbumPorId(album_id);
+		this.anio = anio;
+		this.duracion = duracion;
+		this.precio = precio;
 	}
 
 	public String getNombre_cancion() {
