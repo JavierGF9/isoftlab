@@ -3,14 +3,14 @@ package org.dominio;
 public class Producto {
 	private String titulo;
 	private String artista;
-	private String año;
+	private String anio;
 	private double precio;
 	private int id;
 	
-	public Producto(String titulo, String artista, String año, double precio, int id) {
+	public Producto(String titulo, String artista, String anio, double precio, int id) {
 		this.titulo = titulo;
 		this.artista = artista;
-		this.año = año;
+		this.anio = anio;
 		this.precio = precio;
 		this.id = id;
 	}
@@ -31,12 +31,12 @@ public class Producto {
 		this.artista = artista;
 	}
 
-	public String getAño() {
-		return año;
+	public String getAnio() {
+		return anio;
 	}
 
-	public void setAño(String año) {
-		this.año = año;
+	public void setAnio(String anio) {
+		this.anio = anio;
 	}
 
 	public double getPrecio() {

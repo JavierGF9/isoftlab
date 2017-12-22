@@ -1,32 +1,35 @@
 package org.dominio;
 
+import java.util.ArrayList;
+
+import org.persistencia.GestorAlbumes;
+
 public class Album {
-	private Cancion[] canciones;
 	private String nombre_album;
 	private String autor;
-	private float duracion;
-	private float precio;
-	private String id;
-	private String año;
+	private String duracion;
+	private int id;
+	private int anio;
 	
-	public Album(Cancion[] canciones, String nombre_album, String autor, float duracion, float precio, String id,
-			String año) {
-		super();
-		this.canciones = canciones;
+	public Album(String nombre_album, String autor, String duracion, int anio) {
 		this.nombre_album = nombre_album;
 		this.autor = autor;
 		this.duracion = duracion;
-		this.precio = precio;
-		this.id = id;
-		this.año = año;
+		this.anio = anio;
 	}
+	
+	// Este constructor no debe ser usado por nosotros, ya que el id se establece automáticamente
+	public Album(int id, String nombre_album, String autor, String duracion, int anio) {
+		this.id = id;
+		this.nombre_album = nombre_album;
+		this.autor = autor;
+		this.duracion = duracion;
+		this.anio = anio;
+	}
+
 
 	public Cancion[] getCanciones() {
-		return canciones;
-	}
-
-	public void setCanciones(Cancion[] canciones) {
-		this.canciones = canciones;
+		return GestorAlbumes.getGestor().getCanciones(id);
 	}
 
 	public String getNombre_album() {
@@ -45,35 +48,48 @@ public class Album {
 		this.autor = autor;
 	}
 
-	public float getDuracion() {
+	public String getDuracion() {
 		return duracion;
 	}
 
-	public void setDuracion(float duracion) {
+	public void setDuracion(String duracion) {
 		this.duracion = duracion;
 	}
 
 	public float getPrecio() {
-		return precio;
+		if (id < 1) return 0;
+		return GestorAlbumes.getGestor().conseguirPrecioTotal(id);
 	}
 
-	public void setPrecio(float precio) {
-		this.precio = precio;
-	}
-
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public int getAnio() {
+		return anio;
 	}
 
-	public String getAño() {
-		return año;
+	public void setAnio(int anio) {
+		this.anio = anio;
+	}
+	
+	public int guardarAlbum() {
+		return GestorAlbumes.getGestor().guardarAlbum(this); 
+	}
+	
+	public String toString() {
+		return String.format("[%d] %s, %s (%d) [%s minutos, %.2f euros]", id, nombre_album, autor, anio, duracion, getPrecio());
 	}
 
-	public void setAño(String año) {
-		this.año = año;
+	public static ArrayList<Album> conseguirTodosAlbumes() {
+		return GestorAlbumes.getGestor().conseguirTodosAlbumes();
+	}
+	
+	public static Album buscarAlbumPorTitulo(String titulo) {
+		return GestorAlbumes.getGestor().buscarAlbumPorTitulo(titulo);
+	}
+
+	public int borrarAlbum() {
+		return GestorAlbumes.getGestor().borrarAlbum(id);
 	}
 }

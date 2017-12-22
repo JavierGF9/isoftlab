@@ -1,17 +1,22 @@
 package org.persistencia;
 
+import java.util.ArrayList;
+
+import org.dominio.Cancion;
 import org.dominio.Producto;
 
 public class GestorProductos {
 	private Producto[] productos;
-	BDCanciones cancs;
-	Cancion compra = new Cancion();
+	private GestorCanciones cancs = GestorCanciones.getGestor();
+	private Cancion compra = new Cancion();
 	
 	public void comprarCancion(int id) {
+		ArrayList<Cancion> lista = cancs.conseguirTodasCanciones();
+		
 		for(int i=0; i < cancs.numCanciones(); i++) {
 			for(int j=0; j < cancs.numCanciones(); j++) {
-				if(i==cancs.canciones[j].getId()) {
-					compra = cancs.canciones[j];
+				if(i==lista.get(j).getId()) {
+					compra = lista.get(j);
 				}
 			}
 			
