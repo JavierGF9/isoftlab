@@ -132,7 +132,7 @@ public class GestorAlbumes {
 		return res;
 	}
 
-	public Album conseguirAlbumPorId(int album_id) {
+	public Album buscarAlbumPorId(int album_id) {
 		Album album = null;
 		
 		try {

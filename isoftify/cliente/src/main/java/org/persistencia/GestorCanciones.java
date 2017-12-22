@@ -3,8 +3,8 @@ package org.persistencia;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Locale;
 
-import org.dominio.Album;
 import org.dominio.Cancion;
 
 public class GestorCanciones {
@@ -29,10 +29,19 @@ public class GestorCanciones {
 	}
 	
 	public int guardarCancion(Cancion c) {
-//		if (GestorAlmacenamiento.getGestor().guardarArchivo(c) == 0)
-//			return GestorDatos.getGestor().guardarArchivo(c);
-//		
-		return 1;
+		int res = 0;
+		
+		try {
+			String sql = String.format(Locale.US, "INSERT INTO CANCIONES (titulo, autor, album_id, anio, duracion, precio) VALUES ('%s', '%s', %d, %d, '%s', %f);", c.getNombre_cancion(), c.getAutor(), c.getAlbum().getId(), c.getAnio(), c.getDuracion(), c.getPrecio());
+			PreparedStatement stmt = ag.getStatement(sql);
+			res = stmt.executeUpdate();
+			stmt.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
 	}
 	
 	public int actualizarCancion(Cancion c) {
@@ -44,7 +53,7 @@ public class GestorCanciones {
 		int n = 0;
 		
 		try {
-			PreparedStatement stmt = ag.getStatement("SELECT COUNT(ID) FROM CANCIONES;");
+			PreparedStatement stmt = ag.getStatement("SELECT COUNT(id) FROM CANCIONES;");
 			ResultSet res = stmt.executeQuery();
 			
 			while (res.next()) {
@@ -60,7 +69,7 @@ public class GestorCanciones {
 		return n;
 	}
 	
-	public Cancion[] conseguirTodasCanciones() {
+	public ArrayList<Cancion> conseguirTodasCanciones() {
 		ArrayList<Cancion> canciones = new ArrayList<Cancion>();
 		
 		try {
@@ -68,7 +77,7 @@ public class GestorCanciones {
 			ResultSet res = stmt.executeQuery();
 			
 			while (res.next()) {
-				canciones.add(new Cancion(res.getInt("id"), res.getString("titulo"), res.getString("autor"), res.getInt("album"), res.getInt("anio"), res.getString("duracion"), res.getFloat("precio")));
+				canciones.add(new Cancion(res.getInt("id"), res.getString("titulo"), res.getString("autor"),  GestorAlbumes.getGestor().buscarAlbumPorId(res.getInt("album_id")), res.getInt("anio"), res.getString("duracion"), res.getFloat("precio")));
 			}
 			
 			stmt.close();
@@ -77,7 +86,7 @@ public class GestorCanciones {
 			e.printStackTrace();
 		}
 		
-		return (Cancion[]) canciones.toArray();
+		return canciones;
 	}
 	
 	public Cancion[] conseguirCancionesPorAlbum(int album_id) {
@@ -101,5 +110,42 @@ public class GestorCanciones {
 //		}
 		
 		return null;
+	}
+
+	public Cancion buscarCancionPorTitulo(String titulo) {
+		Cancion cancion = null;
+		
+		try {
+			String sql = String.format("SELECT * FROM CANCIONES WHERE titulo='%s';", titulo);
+			PreparedStatement stmt = ag.getStatement(sql);
+			ResultSet res = stmt.executeQuery();
+			
+			while (res.next()) {
+				cancion = new Cancion(res.getInt("id"), res.getString("titulo"), res.getString("autor"), GestorAlbumes.getGestor().buscarAlbumPorId(res.getInt("album_id")), res.getInt("anio"), res.getString("duracion"), res.getFloat("precio"));
+			}
+			
+			stmt.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return cancion;
+	}
+
+	public int borrarCancion(int id) {
+		int res = 0;
+		
+		try {
+			String sql = String.format("DELETE FROM CANCIONES WHERE id=%d", id);
+			PreparedStatement stmt = ag.getStatement(sql);
+			res = stmt.executeUpdate();
+			stmt.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
 	}
 }

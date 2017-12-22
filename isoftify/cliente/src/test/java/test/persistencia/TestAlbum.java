@@ -31,7 +31,7 @@ public class TestAlbum {
 		
 		a = Album.buscarAlbumPorTitulo("Led Zeppelin");
 		assertNotNull(a);
-		System.out.println(a.toString());
+		System.out.println("Guardado album: " + a.toString());
 	}
 	
 	@After
