@@ -2,7 +2,7 @@ package org.dominio;
 
 public class CuentaUsuario {
 	private String nombre;
-	private String contraseña;
+	private String contrasena;
 	private Carrito carrito;
 	private Lista[] lista;
 	private Monedero monedero;
@@ -14,11 +14,11 @@ public class CuentaUsuario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 	public Carrito getCarrito() {
 		return carrito;
@@ -45,7 +45,7 @@ public class CuentaUsuario {
 		this.adquirida = adquirida;
 	}
 	
-	public boolean crear(String usuario, String contraseña) {
+	public boolean crear(String usuario, String contrasena) {
 		boolean resultado=false;
 		
 		return resultado;

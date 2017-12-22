@@ -33,7 +33,7 @@ public class GestorAlbumes {
 		int res = 0;
 		
 		try {
-			String sql = String.format("INSERT INTO ALBUMES (nombre, autor, anio, duracion) VALUES ('%s', '%s', %d, '%s');", a.getNombre_album(), a.getAutor(), a.getAño(), a.getDuracion());
+			String sql = String.format("INSERT INTO ALBUMES (nombre, autor, anio, duracion) VALUES ('%s', '%s', %d, '%s');", a.getNombre_album(), a.getAutor(), a.getAnio(), a.getDuracion());
 			PreparedStatement stmt = ag.getStatement(sql);
 			res = stmt.executeUpdate();
 			stmt.close();

@@ -9,22 +9,22 @@ public class Album {
 	private String autor;
 	private String duracion;
 	private int id;
-	private int año;
+	private int anio;
 	
-	public Album(String nombre_album, String autor, String duracion, int año) {
+	public Album(String nombre_album, String autor, String duracion, int anio) {
 		this.nombre_album = nombre_album;
 		this.autor = autor;
 		this.duracion = duracion;
-		this.año = año;
+		this.anio = anio;
 	}
 	
 	// Este constructor no debe ser usado por nosotros, ya que el id se establece automáticamente
-	public Album(int id, String nombre_album, String autor, String duracion, int año) {
+	public Album(int id, String nombre_album, String autor, String duracion, int anio) {
 		this.id = id;
 		this.nombre_album = nombre_album;
 		this.autor = autor;
 		this.duracion = duracion;
-		this.año = año;
+		this.anio = anio;
 	}
 
 
@@ -65,12 +65,12 @@ public class Album {
 		return id;
 	}
 
-	public int getAño() {
-		return año;
+	public int getAnio() {
+		return anio;
 	}
 
-	public void setAño(int año) {
-		this.año = año;
+	public void setAnio(int anio) {
+		this.anio = anio;
 	}
 	
 	public int guardarAlbum() {
@@ -78,7 +78,7 @@ public class Album {
 	}
 	
 	public String toString() {
-		return String.format("[%d] %s, %s (%d) [%s minutos, %.2f €]", id, nombre_album, autor, año, duracion, getPrecio());
+		return String.format("[%d] %s, %s (%d) [%s minutos, %.2f euros]", id, nombre_album, autor, anio, duracion, getPrecio());
 	}
 
 	public static ArrayList<Album> conseguirTodosAlbumes() {
