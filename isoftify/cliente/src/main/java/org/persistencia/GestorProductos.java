@@ -13,15 +13,17 @@ public class GestorProductos {
 	public void comprarCancion(int id) {
 		ArrayList<Cancion> lista = cancs.conseguirTodasCanciones();
 		
-		for(int i=0; i < cancs.numCanciones(); i++) {
-			for(int j=0; j < cancs.numCanciones(); j++) {
-				if(i==lista.get(j).getId()) {
-					compra = lista.get(j);
-				}
-			}
-			
+		for(int i=0; i < lista.size()-1; i++) {
+				if(id==lista.get(i).getId()) {
+					compra = lista.get(i);
+				}		
+		}
+		
+		if(compra == null) {
+			System.out.println("No existe una canción con el ID solicitado");
 		}
 	}
+	
 	
 
 	public Producto[] getProductos() {
