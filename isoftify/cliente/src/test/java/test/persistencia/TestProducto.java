@@ -14,7 +14,6 @@ public class TestProducto {
 	@Before 
 	public void TestInicial() {
 		GestorCanciones gestor = GestorCanciones.getGestor();
-		Cancion compra = new Cancion();
 		ArrayList<Cancion> lista = gestor.conseguirTodasCanciones();
 		assertNotNull(lista);
 	}
