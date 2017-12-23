@@ -27,6 +27,14 @@ CREATE TABLE Usuarios (
   PRIMARY KEY (id)
 );
 
+CREATE TABLE Listas (
+	id INT AUTO_INCREMENT,
+	nombre VARCHAR(255) NOT NULL,
+	album INT,
+	cancion INT,
+	PRIMARY KEY (id)
+);
+
 INSERT INTO Albumes (nombre, autor, anio, duracion)
 VALUES ('Guitar Gansters & Cadillac Blood', 'Volbeat', 2008, '48:00');
 INSERT INTO Albumes (nombre, autor, anio, duracion)
@@ -41,3 +49,13 @@ VALUES ('Animal I Have Become', 'Three Days Grace', 2, 2006, '3:51', 4.50);
 
 INSERT INTO Usuarios (nombre, password)
 VALUES ('Perico', 'Palotes');
+INSERT INTO Usuarios (nombre, password)
+VALUES ('Periquito', 'Palos');
+
+
+INSERT INTO Listas(nombre,album,cancion)
+VALUES ('Perico','2','1')
+INSERT INTO Listas(nombre)
+VALUES ('Perquito')
+
+
