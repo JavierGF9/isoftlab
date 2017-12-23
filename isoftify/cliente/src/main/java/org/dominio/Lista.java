@@ -1,27 +1,54 @@
 package org.dominio;
 
 public class Lista {
-	private Cancion[] canciones;
-	private CuentaUsuario cuenta;
-	private Album[] albumes;
+	private int cancion; /*para simplificar el codigo, solo será posible añadir una cancion y un album por lista*/
+	private int album;
+	private String cuenta;
 	private String nombre_lista;
-	private String id_lista;
+	private int id;
 	
-	public boolean agregar_cancion(String id) { return true; }
-	public boolean agregar_album(String id) { return true; }
-	public boolean borrar_cancion(String id) { return true; }
-	public boolean borrar_album(String id) { return true; }
-	
-	public Cancion[] getCanciones() {
-		return canciones;
+	public Lista(String nombre_lista, String cuenta, int cancion, int album) {
+		this.nombre_lista = nombre_lista;
+		this.cuenta = cuenta;
+		this.album = album;
+		this.cancion=cancion;
 	}
 	
-	public CuentaUsuario getCuenta() {
+	// Este constructor no debe ser usado por nosotros, ya que el id se establece automÃ¡ticamente
+	public Lista(int id,String nombre_lista, String cuenta, int cancion, int album) {
+		this.id=id;
+		this.nombre_lista = nombre_lista;
+		this.cuenta = cuenta;
+		this.album = album;
+		this.cancion=cancion;
+	}
+	
+	public void set_cancion(int id) { 
+		this.cancion=id; 
+	}
+	
+	public void set_album(int id) { 
+		this.album=id;
+	}
+	
+	public void borrar_cancion() {
+		this.cancion=0;
+	}
+	
+	public void borrar_album() {
+		this.album=0;
+	}
+	
+	public int getCancion() {
+		return cancion;
+	}
+	
+	public String getCuenta() {
 		return cuenta;
 	}
 
-	public Album[] getAlbumes() {
-		return albumes;
+	public int getAlbum() {
+		return album;
 	}
 	
 	public String getNombre_lista() {
@@ -32,7 +59,7 @@ public class Lista {
 		this.nombre_lista = nombre_lista;
 	}
 	
-	public String getId_lista() {
-		return id_lista;
+	public int getId_lista() {
+		return id;
 	}
 }
