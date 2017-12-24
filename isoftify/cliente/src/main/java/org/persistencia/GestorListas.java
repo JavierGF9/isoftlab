@@ -3,9 +3,7 @@ package org.persistencia;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Locale;
 
-import org.dominio.Album;
 import org.dominio.Lista;
 
 public class GestorListas {
