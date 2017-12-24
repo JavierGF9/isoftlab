@@ -6,10 +6,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class Agente {
-	private final String driver = "org.h2.Driver";
-	private final String ruta = "base_datos";
-	private final String user = "isoftlab";
-	private final char[] password = "isoft".toCharArray();
+	private static final String driver = "org.h2.Driver";
+	private static final String ruta = "base_datos";
+	private static final String user = "isoftlab";
+	private static final char[] password = "isoft".toCharArray();
 	
 	private static Agente instancia = null;
 	private Connection conexion;
