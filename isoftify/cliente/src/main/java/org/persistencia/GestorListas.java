@@ -61,7 +61,25 @@ public class GestorListas {
 		
 		return res;
 	}
-	
+	public ArrayList<Lista> conseguirTodasListas(){
+		ArrayList<Lista> listas = new ArrayList<Lista>();
+		
+		try {
+			PreparedStatement stmt = ag.getStatement("SELECT * FROM listas;");
+			ResultSet res = stmt.executeQuery();
+			
+			while(res.next()) {
+				listas.add(new Lista(res.getInt("id"), res.getString("nombre"), res.getInt("cancion")));
+			}
+			
+			stmt.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return listas;
+	}
 	public Lista conseguirListaPorUsuario(String cuenta) {
 		Lista lista = null;
 		
@@ -98,4 +116,5 @@ public class GestorListas {
 		
 		return res;
 	}
+	
 }

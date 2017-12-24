@@ -30,7 +30,6 @@ CREATE TABLE Usuarios (
 CREATE TABLE Listas (
 	id INT AUTO_INCREMENT,
 	nombre VARCHAR(255) NOT NULL,
-	album INT,
 	cancion INT,
 	PRIMARY KEY (id)
 );
@@ -53,8 +52,8 @@ INSERT INTO Usuarios (nombre, password)
 VALUES ('Periquito', 'Palos');
 
 
-INSERT INTO Listas(nombre,album,cancion)
-VALUES ('Perico','2','1')
+INSERT INTO Listas(nombre, cancion)
+VALUES ('Mix2017',2)
 INSERT INTO Listas(nombre)
 VALUES ('Perquito')
 

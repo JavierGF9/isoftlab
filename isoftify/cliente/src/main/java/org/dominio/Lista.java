@@ -23,6 +23,12 @@ public class Lista {
 		this.cancion=cancion;
 	}
 	
+	public Lista(int id, String nombre_lista, int cancion) {
+		this.id = id;
+		this.nombre_lista = nombre_lista;
+		this.cancion = cancion;
+	}
+
 	public void set_cancion(int id) { 
 		this.cancion=id; 
 	}
@@ -61,5 +67,9 @@ public class Lista {
 	
 	public int getId_lista() {
 		return id;
+	}
+	
+	public String toString() {
+		return String.format("[%d] %s, %d",id, nombre_lista, cancion);
 	}
 }
