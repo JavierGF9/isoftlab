@@ -99,11 +99,11 @@ public class GestorListas {
 		return lista;
 	}
 	
-	public int actualizarLista (int lista_id,int album,int cancion) {
+	public int actualizarLista (int lista_id, int cancion) {
 		int res=0;
 		
 		try {
-			String sql = String.format("UPDATE LISTAS SET ALBUM='%d',CANCION='%d' WHERE ID='%d';",album,cancion);
+			String sql = String.format("UPDATE LISTAS SET CANCION='%d' WHERE ID='%d';", cancion, lista_id);
 			PreparedStatement stmt = ag.getStatement(sql);
 			res = stmt.executeUpdate();
 			stmt.close();		
