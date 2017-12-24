@@ -1,7 +1,7 @@
 package org.dominio;
 
 public class Carrito {
-	private String[] id;
+	private int id;
 	private double precio;
 	private String id_usuario;
 	
@@ -9,11 +9,11 @@ public class Carrito {
 		return 0.0;
 	}
 
-	public String[] getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String[] id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

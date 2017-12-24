@@ -27,10 +27,10 @@ public class GestorProductos {
 	
 
 	public Producto[] getProductos() {
-		return productos;
+		return productos.clone();
 	}
 
 	public void setProductos(Producto[] productos) {
-		this.productos = productos;
+		this.productos = productos.clone();
 	}
 }

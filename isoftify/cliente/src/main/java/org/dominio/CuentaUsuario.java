@@ -27,10 +27,10 @@ public class CuentaUsuario {
 		this.carrito = carrito;
 	}
 	public Lista[] getLista() {
-		return lista;
+		return lista.clone();
 	}
 	public void setLista(Lista[] lista) {
-		this.lista = lista;
+		this.lista = lista.clone();
 	}
 	public Monedero getMonedero() {
 		return monedero;
@@ -39,10 +39,10 @@ public class CuentaUsuario {
 		this.monedero = monedero;
 	}
 	public Lista[] getAdquirida() {
-		return adquirida;
+		return adquirida.clone();
 	}
 	public void setAdquirida(Lista[] adquirida) {
-		this.adquirida = adquirida;
+		this.adquirida = adquirida.clone();
 	}
 	
 	public boolean crear(String usuario, String contrasena) {
