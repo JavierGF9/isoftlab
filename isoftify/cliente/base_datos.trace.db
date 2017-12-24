@@ -1,0 +1,96 @@
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:54:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM LISTAS; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
+2017-12-24 00:58:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "LISTAS" no encontrada
+Table "LISTAS" not found; SQL statement:
+SELECT * FROM listas; [42102-196]
