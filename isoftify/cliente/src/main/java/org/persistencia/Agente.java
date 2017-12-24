@@ -9,7 +9,7 @@ public class Agente {
 	private final String driver = "org.h2.Driver";
 	private final String ruta = "base_datos";
 	private final String user = "isoftlab";
-	private final String password = "";
+	private final char[] password = "isoft".toCharArray();
 	
 	private static Agente instancia = null;
 	private Connection conexion;
@@ -20,7 +20,7 @@ public class Agente {
 		url = "jdbc:h2:file:" + archivo.getAbsolutePath().replace("\\\\", "/");
 		
 		Class.forName(driver);
-		conexion = DriverManager.getConnection(url, user, password);
+		conexion = DriverManager.getConnection(url, user, new String(password));
 	}
 
 	public static Agente getInstancia() throws Exception {

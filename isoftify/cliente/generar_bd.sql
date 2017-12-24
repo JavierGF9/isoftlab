@@ -31,7 +31,8 @@ CREATE TABLE Listas (
 	id INT AUTO_INCREMENT,
 	nombre VARCHAR(255) NOT NULL,
 	cancion INT,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (cancion) REFERENCES Canciones(id)
 );
 
 INSERT INTO Albumes (nombre, autor, anio, duracion)
@@ -51,10 +52,7 @@ VALUES ('Perico', 'Palotes');
 INSERT INTO Usuarios (nombre, password)
 VALUES ('Periquito', 'Palos');
 
-
 INSERT INTO Listas(nombre, cancion)
-VALUES ('Mix2017',2)
+VALUES ('Mix2017',2);
 INSERT INTO Listas(nombre)
-VALUES ('Perquito')
-
-
+VALUES ('Perquito');
